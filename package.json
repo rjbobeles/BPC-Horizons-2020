@@ -8,6 +8,11 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
     "constate": "^3.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-config-prettier": "^6.10.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.1.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hook-form": "^6.10.1",
@@ -25,8 +30,20 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "prettier",
+      "prettier/standard",
+      "prettier/react",
+      "plugin:react/recommended"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "warn",
+      "import/no-anonymous-default-export": 0,
+      "react/display-name": 0
+    }
   },
   "browserslist": {
     "production": [
@@ -38,6 +55,16 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
     ]
   }
 }

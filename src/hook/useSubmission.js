@@ -6,19 +6,18 @@ import { courses as dataCourses } from '../data/courses'
 import { mediaTypes as dataMediaTypes } from '../data/mediaTypes'
 
 export const useSubmission = () => {
-  const [ courses, setCourses ] = useState()
-  const [ mediaTypes, setMediaTypes ] = useState()
-  const [ debug, setDebug ] = useState()
-  const [ status, setStatus ] = useState()
+  const [courses, setCourses] = useState()
+  const [mediaTypes, setMediaTypes] = useState()
+  const [debug, setDebug] = useState()
+  const [status, setStatus] = useState()
 
   const fetchSite = async () => {
-    if(process.env.REACT_APP_GH_PAGES === false)
-    {
+    if (process.env.REACT_APP_GH_PAGES === false) {
       setCourses(dataCourses)
       setMediaTypes(dataMediaTypes)
       setDebug('true')
-      return;
-    } 
+      return
+    }
 
     await axios
       .post(process.env.REACT_APP_API_URL, {
@@ -28,26 +27,25 @@ export const useSubmission = () => {
       .then((res) => {
         setCourses(res.data.courses)
         setMediaTypes(res.data.mediaTypes)
-        if(res.data.debug !== undefined) setDebug(res.data.debug)
+        if (res.data.debug !== undefined) setDebug(res.data.debug)
         console.log(res.data)
       })
       .catch((err) => {
         console.log(err.messenger)
       })
-      
   }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => fetchSite(), [])
 
   return {
-    courses, 
-    mediaTypes, 
+    courses,
+    mediaTypes,
     debug,
-    status
+    status,
   }
 }
 
-const [ SubmissionProvider, useSubmissionContext ] = constate(useSubmission)
+const [SubmissionProvider, useSubmissionContext] = constate(useSubmission)
 
 export { SubmissionProvider, useSubmissionContext }

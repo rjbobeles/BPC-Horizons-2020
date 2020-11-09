@@ -1,7 +1,5 @@
 import React from 'react'
 
 export default function Closed() {
-  return (
-    <p>Closed</p>
-  )
+  return <p>Closed</p>
 }
