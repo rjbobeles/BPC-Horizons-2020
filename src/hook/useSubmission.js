@@ -20,7 +20,7 @@ export const useSubmission = () => {
     }
 
     await axios
-      .post(process.env.REACT_APP_API_URL, {
+      .get(process.env.REACT_APP_API_URL, {
         type: process.env.REACT_APP_API_TYPE,
         theme: process.env.REACT_APP_API_THEME,
       })
