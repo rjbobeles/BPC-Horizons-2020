@@ -31,7 +31,7 @@ export const useSubmission = () => {
         console.log(res.data)
       })
       .catch((err) => {
-        console.log(err.messenger)
+        console.log(err.message)
       })
   }
 
