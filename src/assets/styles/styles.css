@@ -1,3 +1,113 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.memento {
+  background-image: url('../img/bg.jpg');
+  background-repeat: repeat;
+}
+.hero {
+  min-height: 640px;
+  max-height: 1080px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.hero .hero-content-wrapper {
+  height: 640px;
+}
+.hero .hero-img {
+  height: 65%;
+}
+.hero .hero-text {
+  width: 500px;
+  max-width: 100%;
+}
+.hero .hero-text > img {
+  width: 180px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.story .wrapper {
+  width: 750px;
+}
+
+.story .photo {
+  padding-bottom: 100%;
+}
+
+.entry {
+  width: 45%;
+}
+
+.entry .photo {
+  height: 150px;
+  width: 150px;
+}
+
+.faq .item {
+  min-height: 220px;
+  width: 45%;
+}
+
+/* ======= BREAKPOINTS ======= */
+
+/*--- 2XL --- */
+@media (max-width: 1536px) {
+}
+
+/*--- XL --- */
+@media (max-width: 1279px) {
+}
+
+/*--- LG --- */
+@media (max-width: 1023px) {
+  .story .wrapper {
+    width: 690px;
+  }
+  .entry {
+    width: 80%;
+  }
+  .faq .item {
+    width: 560px;
+    min-height: 0;
+  }
+}
+
+/*--- MD --- */
+@media (max-width: 767px) {
+  .story .wrapper {
+    width: 100%;
+  }
+  .entry {
+    width: 100%;
+  }
+}
+
+/*--- SM --- */
+@media (max-width: 639px) {
+  .memento .hero {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .memento .hero .hero-content-wrapper {
+    height: 90%;
+  }
+  .memento .hero .hero-img {
+    height: 70%;
+  }
+  .memento .hero .hero-text > img {
+    width: 160px;
+  }
+  .entry .photo {
+    height: 100px;
+    width: 100px;
+  }
+  .faq .item {
+    width: 100%;
+  }
+}
