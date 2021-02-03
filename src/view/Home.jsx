@@ -4,6 +4,7 @@ import logo from '../assets/img/logo.png'
 import PhotoText from '../component/PhotoText'
 import Entry from '../component/MediaTypes'
 import FaqItem from '../component/FaqItem'
+import Form from '../component/Form'
 
 import folioData from '../data/folioData'
 
@@ -55,10 +56,11 @@ function homePage() {
         <h2 className="text-5xl md:text-6xl text-roast sm:mx-auto sm:text-center mb-12 sm:mb-24 md:mb-32">
           Submit
         </h2>
+        <Form />
       </div>
       <div className="footer mb-24 container mx-auto flex flex-col lg:flex-row text-kofi">
         <div className="w-full lg:w-1/4 mb-12 lg:mb-0 xl:w-1/3">
-          <img src={logo} width="150px" />
+          <img src={logo} width="150px" alt="" />
         </div>
         <div className="w-11/12 lg:w-1/2 mb-24 lg:mb-0 xl:w-1/3">
           <p>{folioData.footerText}</p>

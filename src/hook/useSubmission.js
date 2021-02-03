@@ -12,7 +12,11 @@ export const useSubmission = () => {
   const [status, setStatus] = useState()
 
   const fetchSite = async () => {
-    if (process.env.REACT_APP_GH_PAGES === false) {
+    if (
+      process.env.REACT_APP_GH_PAGES === false ||
+      process.env.REACT_APP_GH_PAGES === null ||
+      process.env.REACT_APP_GH_PAGES === undefined
+    ) {
       setCourses(dataCourses)
       setMediaTypes(dataMediaTypes)
       setDebug('true')
@@ -35,6 +39,8 @@ export const useSubmission = () => {
       })
   }
 
+  const submitData = async (data) => {}
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => fetchSite(), [])
 
@@ -43,6 +49,7 @@ export const useSubmission = () => {
     mediaTypes,
     debug,
     status,
+    submitData,
   }
 }
 
