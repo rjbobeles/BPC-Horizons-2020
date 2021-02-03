@@ -1,4 +1,4 @@
-# Horizons: ____________
+# Horizons: Momento
 
 The Official Art Folio of the students of De La Salle-College of Saint Benilde for A.Y. 20-21 (Submission).
 
