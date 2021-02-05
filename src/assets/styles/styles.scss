@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './fonts';
+
+p {
+  font-family: 'karla';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'fraunces';
+  color: #333;
+}
+
+.container {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.memento {
+  background-image: url('../img/bg.jpg');
+  background-repeat: repeat;
+}
+.hero {
+  min-height: 640px;
+  max-height: 1080px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  .hero-content-wrapper {
+    height: 640px;
+  }
+  .hero-img {
+    height: 65%;
+    background-image: url('../img/hero.png');
+    background-size: cover;
+    background-position: center;
+  }
+  .hero-text {
+    width: 500px;
+    max-width: 100%;
+    img {
+      width: 180px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+.story {
+  .wrapper {
+    width: 860px;
+  }
+  .photo {
+    padding-bottom: 100%;
+    background-size: contain;
+    background-position: center;
+  }
+  .photo.story-1 {
+    background-image: url('../img/story1.png');
+  }
+  .photo.story-2 {
+    background-image: url('../img/story2.png');
+  }
+}
+
+.entry-list > div {
+  width: 45%;
+}
+
+.entry {
+  .photo {
+    height: 150px;
+    width: 150px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .photo.graphic-design {
+    background-image: url('../img/mediatypes/0Graphic\ Design.png');
+  }
+  .photo.illustration {
+    background-image: url('../img/mediatypes/0illustration.png');
+  }
+  .photo.industrial-design {
+    background-image: url('../img/mediatypes/0industrial\ design.png');
+  }
+  .photo.fashion-design {
+    background-image: url('../img/mediatypes/0Fashion.png');
+  }
+  .photo.interior-design {
+    background-image: url('../img/mediatypes/0Interior\ Design.png');
+  }
+  .photo.architectural-design {
+    background-image: url('../img/mediatypes/0Architecture.png');
+  }
+  .photo.music {
+    background-image: url('../img/mediatypes/0music.png');
+  }
+  .photo.film {
+    background-image: url('../img/mediatypes/0Film.png');
+  }
+  .photo.other {
+    background-image: url('../img/mediatypes/0Others.png');
+  }
+}
+
+.faq .faq-list > div {
+  min-height: 220px;
+  width: 45%;
+}
+
+.form-row {
+  width: 100%;
+  margin-bottom: 36px;
+
+  label {
+    font-family: 'fraunces';
+    color: #333;
+    margin-bottom: 12px;
+  }
+  input,
+  textarea,
+  select {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 3px 0px;
+    font-family: 'karla';
+    font-size: 28px;
+    border-bottom: 1px solid #333;
+  }
+  textarea {
+    font-size: 22px !important;
+  }
+  p {
+    color: rgba(214, 58, 58, 0.918);
+    position: absolute;
+  }
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+/* ======= BREAKPOINTS ======= */
+
+/*--- 2XL --- */
+@media (max-width: 1536px) {
+}
+
+/*--- XL --- */
+@media (max-width: 1279px) {
+}
+
+/*--- LG --- */
+@media (max-width: 1023px) {
+  .story .wrapper {
+    width: 690px;
+  }
+  .entry-list > div {
+    width: 80%;
+  }
+  .faq .faq-list > div {
+    width: 560px;
+    min-height: 0;
+  }
+}
+
+/*--- MD --- */
+@media (max-width: 767px) {
+  .story .wrapper {
+    width: 100%;
+  }
+  .entry {
+    width: 100%;
+  }
+}
+
+/*--- SM --- */
+@media (max-width: 639px) {
+  .memento .hero {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .memento .hero .hero-content-wrapper {
+    height: 90%;
+  }
+  .memento .hero .hero-img {
+    height: 70%;
+  }
+  .memento .hero .hero-text > img {
+    width: 160px;
+  }
+  .entry .photo {
+    height: 100px;
+    width: 100px;
+  }
+  .faq .faq-list > div {
+    width: 100%;
+  }
+}
