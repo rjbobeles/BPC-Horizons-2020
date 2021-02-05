@@ -4,12 +4,14 @@ const folioData = {
     'Striving to achieve perfection amidst a busy world, we often forget to be content and appreciate the little things; those subtle yet precious moments that give meaning to our lives.',
   photoText: [
     {
+      illus: 'story-1',
       text1:
         'You remember old conversations, the directions and sceneries of different places you have visited, your childhood dream, and even phone numbers.',
       text2:
         'Our brain is intricate, powerful, and has limitless capacity to store memory. Each day, we create and live through new experiences—stacked, innumerable, and piled up before we even knew it. But we choose to remember only what is truly important to us. ',
     },
     {
+      illus: 'story-2',
       text1:
         'In looking back, what are these memories that you can strongly consider as a memento? What matters most to you as you look deeper that you are grateful for?',
       text2:
@@ -18,46 +20,55 @@ const folioData = {
   ],
   mediaTypes: [
     {
+      illus: 'graphic-design',
       title: 'Graphic Design',
       description:
         'Graphic design submissions may be in the form of, but not limited to, collages, typographic works, and poster designs.',
     },
     {
+      illus: 'illustration',
       title: 'Illustration',
       description:
         'Illustration submissions may be clean, scanned sketches, or rendered versions of traditional, digital, or 3D artworks.',
     },
     {
+      illus: 'industrial-design',
       title: 'Industrial Design',
       description:
         'Industrial design submissions may be rendered images, clean and scanned sketches, or photos of the scale model against a plain background.',
     },
     {
+      illus: 'fashion-design',
       title: 'Fashion Design',
       description:
         'Fashion design submissions may be clean and scanned sketches, or photos of the fashion material dressed on a model or mannequin against a plain background.',
     },
     {
+      illus: 'interior-design',
       title: 'Interior Design',
       description:
         'Interior design submissions may be rendered images, clean and scanned sketches, or photos of the scale model against a plain background.',
     },
     {
+      illus: 'architectural-design',
       title: 'Architectural Design',
       description:
         'Architectural design submissions may be rendered images, clean and scanned sketches, or photos of the scale model against a plain background.',
     },
     {
+      illus: 'music',
       title: 'Music',
       description:
         'Music submissions may be your compositions through a Spotify/Soundcloud/Youtube link or a .mp3 file (for audio only). Preferably, include the cover art for your compositions in your submission.',
     },
     {
+      illus: 'film',
       title: 'Film',
       description:
         'Film submissions may be the trailers of your directed films through a YouTube link. Preferably, include the movie poster of your film in your submission.',
     },
     {
+      illus: 'other',
       title: 'Other forms of art',
       description:
         'Other visual arts submissions (ex. Sculptures or ceramics) may be rendered images, or photos of the scale model against a plain background.',
