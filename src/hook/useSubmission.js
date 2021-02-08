@@ -8,34 +8,36 @@ import { mediaTypes as dataMediaTypes } from '../data/mediaTypes'
 export const useSubmission = () => {
   const [courses, setCourses] = useState()
   const [mediaTypes, setMediaTypes] = useState()
-  const [debug, setDebug] = useState()
   const [status, setStatus] = useState()
 
   const fetchSite = async () => {
-    if (
-      process.env.REACT_APP_GH_PAGES === false ||
-      process.env.REACT_APP_GH_PAGES === null ||
-      process.env.REACT_APP_GH_PAGES === undefined
-    ) {
+    if (process.env.REACT_APP_GH_PAGES === 'true') {
       setCourses(dataCourses)
       setMediaTypes(dataMediaTypes)
-      setDebug('true')
       return
     }
 
     await axios
-      .get(process.env.REACT_APP_API_URL, {
+      .post(process.env.REACT_APP_API_URL, {
         type: process.env.REACT_APP_API_TYPE,
         theme: process.env.REACT_APP_API_THEME,
       })
       .then((res) => {
+        const debug = res.data.debug !== undefined ? res.data.debug : false
         setCourses(res.data.courses)
         setMediaTypes(res.data.mediaTypes)
-        if (res.data.debug !== undefined) setDebug(res.data.debug)
-        console.log(res.data)
+        setStatus({ code: res.data.code, status: 'Open', debug })
       })
       .catch((err) => {
-        console.log(err.message)
+        if (err.response) {
+          if (err.response.data.code === 412) {
+            setStatus({
+              code: err.response.data.code,
+              status: err.response.data.message,
+              debug: false,
+            })
+          }
+        }
       })
   }
 
@@ -43,11 +45,11 @@ export const useSubmission = () => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => fetchSite(), [])
+  // useEffect(() => console.log(status), [status])
 
   return {
     courses,
     mediaTypes,
-    debug,
     status,
     submitData,
   }
