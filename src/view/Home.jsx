@@ -109,21 +109,21 @@ function homePage() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={fb} width="20px" />
+                  <img src={fb} width="20px" alt="" />
                 </a>
                 <a
                   href="https://twitter.com/thebenildean/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={twt} width="20px" className="mx-2" />
+                  <img src={twt} width="20px" className="mx-2" alt="" />
                 </a>
                 <a
                   href="https://instagram.com/thebenildean/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={ig} width="20px" className="mr-3" />
+                  <img src={ig} width="20px" className="mr-3" alt="" />
                 </a>
               </span>
               thebenildean
@@ -134,7 +134,7 @@ function homePage() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={web} width="20px" className="mr-2" />
+                <img src={web} width="20px" className="mr-2" alt="" />
               </a>
               read.thebenildean.org
             </p>
