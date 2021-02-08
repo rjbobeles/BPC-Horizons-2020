@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { SubmissionProvider } from './hook/useSubmission'
+import { SubmissionStatusProvider } from './hook/useSubmissionStatus'
 
 import ClosedView from './view/Closed'
 import ErrorView from './view/Error'
@@ -26,7 +27,9 @@ function App() {
 export default (props) => (
   <SubmissionProvider>
     <Router>
-      <App {...props} />
+      <SubmissionStatusProvider>
+        <App {...props} />
+      </SubmissionStatusProvider>
     </Router>
   </SubmissionProvider>
 )

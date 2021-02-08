@@ -5,7 +5,7 @@ import { useSubmissionContext } from '../hook/useSubmission'
 
 export default function Form() {
   const { register, handleSubmit, errors } = useForm()
-  const { courses, mediaTypes, submitData } = useSubmissionContext()
+  const { courses, mediaTypes } = useSubmissionContext()
 
   const onSubmit = (data) => {
     console.log(data)
@@ -196,7 +196,7 @@ export default function Form() {
 export const FormFieldError = ({ errors, name }) => {
   return errors && errors.hasOwnProperty(name) ? (
     <>
-      <p>ERROR: {errors[name].message}</p>
+      <p>{errors[name].message}</p>
     </>
   ) : null
 }
