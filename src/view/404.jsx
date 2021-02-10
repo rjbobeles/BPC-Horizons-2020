@@ -1,5 +1,9 @@
 import React from 'react'
 
-export default function NotFound() {
-  return <p>Not Found</p>
+import SidePage from '../component/SidePage'
+
+function NotFound() {
+  return <SidePage msg="Error 404" sub="Page not found" />
 }
+
+export default NotFound

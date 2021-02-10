@@ -1,5 +1,9 @@
 import React from 'react'
 
-export default function Closed() {
-  return <p>Closed</p>
+import SidePage from '../component/SidePage'
+
+function Closed() {
+  return <SidePage msg="Sunmissions are now closed." />
 }
+
+export default Closed

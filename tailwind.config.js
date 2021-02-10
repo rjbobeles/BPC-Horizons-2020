@@ -10,6 +10,7 @@ module.exports = {
     }, 
     colors: {
       kofi: '#7D5E33', 
+      cocoa: '#554632', 
       roast: '#333', 
       smoke: '#9C9B99', 
       ceramic: '#fff'

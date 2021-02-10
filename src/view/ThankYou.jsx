@@ -1,5 +1,9 @@
 import React from 'react'
 
-export default function ThankYou() {
-  return <p>Thank You</p>
+import SidePage from '../component/SidePage'
+
+function ThankYou() {
+  return <SidePage msg="Thanks for sharing a piece of your stories with us!" />
 }
+
+export default ThankYou

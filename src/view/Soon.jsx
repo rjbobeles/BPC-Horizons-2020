@@ -1,5 +1,9 @@
 import React from 'react'
 
-export default function ThankYou() {
-  return <p>Thank You</p>
+import SidePage from '../component/SidePage'
+
+function Soon() {
+  return <SidePage msg="Coming Soon" />
 }
+
+export default Soon

@@ -1,5 +1,9 @@
 import React from 'react'
 
-export default function Error() {
-  return <p>Error</p>
+import SidePage from '../component/SidePage'
+
+function Error() {
+  return <SidePage msg="Error" />
 }
+
+export default Error
