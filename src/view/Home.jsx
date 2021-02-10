@@ -10,6 +10,10 @@ import fb from '../assets/img/facebook.png'
 import twt from '../assets/img/twitter.png'
 import ig from '../assets/img/instagram.png'
 import web from '../assets/img/globe.png'
+import spot1 from '../assets/img/spot/illus1.png'
+import spot2 from '../assets/img/spot/illus2.png'
+import spot3 from '../assets/img/spot/illus3.png'
+import spot4 from '../assets/img/spot/illus4.png'
 
 import { motion } from 'framer-motion'
 import { IntersectionObserver } from '../component/IntersectionObserver'
@@ -20,24 +24,23 @@ function homePage() {
   return (
     <div className="w-full memento overflow-x-hidden">
       <div className="hero container mx-auto h-screen flex flex-col justify-center">
-        <div className="hero-content-wrapper w-full relative flex flex-col justify-end items-center">
+        <div className="hero-content-wrapper w-full relative flex flex-col justify-center items-center">
           <motion.div
-            className="hero-img w-full absolute top-0"
+            className="hero-img w-full top-0"
             animate={{ y: '0px', opacity: 1 }}
             initial={{ y: '50px', opacity: 0 }}
             transition={{ type: 'spring', damping: 60 }}
           ></motion.div>
-          <div className="hero-text text-center relative z-10">
+          <div className="hero-text flex flex-col sm:flex-row items-center">
             <motion.img
               src={logo}
               alt="Horizons: Memento logo"
-              className="mb-8"
               animate={{ opacity: 1, scale: 1 }}
               initial={{ opacity: 0, scale: 0.8 }}
               transition={{ type: 'spring', damping: 40, delay: 0.75 }}
             />
             <motion.p
-              className="text-kofi w-10/12 sm:w-auto text-sm mx-auto"
+              className="text-cocoa w-10/12 sm:w-auto mx-auto leading-snug"
               animate={{ opacity: 1 }}
               initial={{ opacity: 0 }}
               transition={{ type: 'spring', damping: 40, delay: 1.5 }}
@@ -47,17 +50,21 @@ function homePage() {
           </div>
         </div>
       </div>
-      <div className="story container mx-auto pt-5 pb-20">
+      <div className="story container mx-auto pt-5 pb-20 relative">
+        <img src={spot2} width="420px" className="absolute spot_1 spot" />
+        <img src={spot4} width="420px" className="absolute spot_2 spot" />
         {Object.entries(folioData.photoText).map(([key, set]) => (
           <IntersectionObserver key={key}>
             <PhotoText texta={set.text1} textb={set.text2} illus={set.illus} />
           </IntersectionObserver>
         ))}
       </div>
-      <div className="entries container mx-auto py-12 sm:py-16 lg:py-24">
+      <div className="entries container mx-auto py-12 sm:py-16 lg:py-24 relative">
         <h2 className="text-5xl text-roast sm:mx-auto sm:text-center mb-12 sm:mb-24">
           What can you submit?
         </h2>
+        <img src={spot3} width="320px" className="absolute spot_3 spot" />
+        <img src={spot1} width="360px" className="absolute spot_4 spot" />
         <div className="entry-list w-full flex flex-col lg:flex-row justify-between items-center lg:items-start flex-wrap">
           {Object.entries(folioData.mediaTypes).map(([index, type]) => (
             <IntersectionObserver key={index}>
@@ -101,7 +108,7 @@ function homePage() {
         </div>
         <div className="w-full lg:w-1/4 mb-12 lg:mb-0 xl:w-1/3 flex flex-col lg:items-end">
           <div>
-            <h6 className="text-2xl mb-4">Stay connected.</h6>
+            <h6 className="text-xl karla text-kofi">STAY CONNECTED.</h6>
             <p className="text-lg flex flex-row items-center mb-2">
               <span className="inline-flex flex-row">
                 <a
