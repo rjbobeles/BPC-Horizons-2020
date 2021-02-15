@@ -134,6 +134,9 @@ h6 {
     font-size: 28px;
     border-bottom: 1px solid #333;
   }
+  input::placeholder {
+    color: #9b876a !important;
+  }
   textarea {
     font-size: 22px !important;
   }
@@ -184,6 +187,15 @@ select:hover {
 .side-corner2 {
   bottom: -400%;
   right: -50%;
+}
+
+button.submit {
+  outline: none !important;
+  transition: all 0.3s ease;
+}
+
+button.submit:hover {
+  outline: none !important;
 }
 
 /* ======= BREAKPOINTS ======= */

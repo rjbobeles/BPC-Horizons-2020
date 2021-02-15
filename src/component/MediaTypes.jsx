@@ -42,9 +42,11 @@ export default function MediaTypes(props) {
     >
       <div className={`photo flex-shrink-0 ${props.illus}`}></div>
       <div className="text pl-6 sm:pl-12 flex flex-col justify-center lg:justify-start xl:justify-center text-roast">
-        <h5 className="text-2xl xl:text-3xl mb-2">{props.title}</h5>
-        <p className="text-sm sm:text-base">{props.description}</p>
-        <p className="text-sm sm:text-base mt-5">{props.description2}</p>
+        <h5 className="text-2xl xl:text-3xl mb-2 text-cocoa">{props.title}</h5>
+        <p className="text-sm sm:text-base text-kofi">{props.description}</p>
+        <p className="text-sm sm:text-base mt-5 text-kofi">
+          {props.description2}
+        </p>
       </div>
     </motion.div>
   )

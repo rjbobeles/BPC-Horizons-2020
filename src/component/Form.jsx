@@ -4,6 +4,8 @@ import { useForm } from 'react-hook-form'
 import { useSubmissionContext } from '../hook/useSubmission'
 import { useSubmissionStatusContext } from '../hook/useSubmissionStatus'
 
+import Loading from './Loading'
+
 export default function Form() {
   const { register, handleSubmit, errors } = useForm()
   const {
@@ -191,11 +193,12 @@ export default function Form() {
             </div>
           </div>
         </div>
-        <input
+        <button
           type="submit"
-          value="Submit Form"
-          className="mx-auto text-xl karla block bg-roast px-5 py-3 text-ceramic cursor-pointer hover:bg-kofi mt-8 md:mt-16 transition-colors w-full md:w-auto"
-        />
+          className="mx-auto text-xl karla block bg-roast px-5 py-3 text-ceramic cursor-pointer hover:bg-kofi mt-8 md:mt-16 w-full md:w-auto submit"
+        >
+          <Loading />
+        </button>
       </form>
     </>
   )

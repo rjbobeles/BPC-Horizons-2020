@@ -31,11 +31,11 @@ export default function FaqItem(props) {
       transition={{ type: 'spring', damping: 30 }}
       variants={variants}
     >
-      <h5 className="text-xl sm:text-2xl lg:text-3xl mb-5 sm:mb-8 font-bold">
+      <h5 className="text-xl sm:text-2xl lg:text-3xl mb-5 sm:mb-8 font-bold text-cocoa">
         {props.q}
       </h5>
-      <p className="text-sm sm:text-base">{props.a}</p>
-      <p className="text-sm sm:text-base mt-5">{props.a2}</p>
+      <p className="text-sm sm:text-base text-kofi">{props.a}</p>
+      <p className="text-sm sm:text-base mt-5 text-kofi">{props.a2}</p>
     </motion.div>
   )
 }
