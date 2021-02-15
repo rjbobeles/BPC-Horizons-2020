@@ -10,7 +10,6 @@ export const useSubmissionStatus = () => {
   const history = useHistory()
 
   const manageAppView = () => {
-    console.log(status)
     if (process.env.REACT_APP_DEBUG_MODE === 'false') {
       if (!status) return
       if (status.debug !== true) {
@@ -40,8 +39,29 @@ export const useSubmissionStatus = () => {
     } else console.error('ERROR: App debug is enabled. Routing is disabled!')
   }
 
+  const manageAppViewSubmit = (response) => {
+    if (process.env.REACT_APP_DEBUG_MODE === 'false') {
+      switch (response.code) {
+        case 200:
+          if (response.message === 'Success') return history.push('/thankyou')
+          break
+
+        case 412:
+          if (response.message === 'Soon') return history.push('/soon')
+          else return history.push('/closed')
+
+        default:
+          return history.push('/error')
+      }
+    } else console.error('ERROR: App debug is enabled. Routing is disabled!')
+  }
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => manageAppView(), [status])
+
+  return {
+    manageAppViewSubmit,
+  }
 }
 
 // eslint-disable-next-line prettier/prettier
