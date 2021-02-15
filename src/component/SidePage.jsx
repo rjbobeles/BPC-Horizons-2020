@@ -22,17 +22,20 @@ export default function SidePage(props) {
           src={spot1}
           width="720px"
           className="absolute side-corner1 side-corner"
+          alt=""
         />
         <img
           src={spot1}
           width="720px"
           className="absolute side-corner2 side-corner"
+          alt=""
         />
         <div className="w-full sm:w-1/3 relative z-10">
           <img
             src={logo}
             width="180px"
             className="logo mx-auto sm:mx-0 mb-8 sm:mb-0"
+            alt=""
           />
         </div>
         <div className="w-full sm:w-2/3 lg:w-1/3 text-center sm:text-left relative z-10">

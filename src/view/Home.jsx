@@ -51,8 +51,18 @@ function homePage() {
         </div>
       </div>
       <div className="story container mx-auto pt-5 pb-20 relative">
-        <img src={spot2} width="420px" className="absolute spot_1 spot" />
-        <img src={spot4} width="420px" className="absolute spot_2 spot" />
+        <img
+          src={spot2}
+          width="420px"
+          className="absolute spot_1 spot"
+          alt=""
+        />
+        <img
+          src={spot4}
+          width="420px"
+          className="absolute spot_2 spot"
+          alt=""
+        />
         {Object.entries(folioData.photoText).map(([key, set]) => (
           <IntersectionObserver key={key}>
             <PhotoText texta={set.text1} textb={set.text2} illus={set.illus} />
@@ -63,8 +73,18 @@ function homePage() {
         <h2 className="text-5xl text-roast sm:mx-auto sm:text-center mb-12 sm:mb-24">
           What can you submit?
         </h2>
-        <img src={spot3} width="320px" className="absolute spot_3 spot" />
-        <img src={spot1} width="360px" className="absolute spot_4 spot" />
+        <img
+          src={spot3}
+          width="320px"
+          className="absolute spot_3 spot"
+          alt=""
+        />
+        <img
+          src={spot1}
+          width="360px"
+          className="absolute spot_4 spot"
+          alt=""
+        />
         <div className="entry-list w-full flex flex-col lg:flex-row justify-between items-center lg:items-start flex-wrap">
           {Object.entries(folioData.mediaTypes).map(([index, type]) => (
             <IntersectionObserver key={index}>
