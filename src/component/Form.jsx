@@ -2,13 +2,21 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 
 import { useSubmissionContext } from '../hook/useSubmission'
+import { useSubmissionStatusContext } from '../hook/useSubmissionStatus'
 
 export default function Form() {
   const { register, handleSubmit, errors } = useForm()
-  const { courses, mediaTypes } = useSubmissionContext()
+  const {
+    courses,
+    mediaTypes,
+    submitData,
+    setSubmitting,
+  } = useSubmissionContext()
+  const { manageAppViewSubmit } = useSubmissionStatusContext()
 
-  const onSubmit = (data) => {
-    console.log(data)
+  const onSubmit = async (data) => {
+    setSubmitting(true)
+    await submitData(data).then((res) => manageAppViewSubmit(res))
   }
 
   return (
