@@ -9,6 +9,7 @@ export const useSubmission = () => {
   const [courses, setCourses] = useState()
   const [mediaTypes, setMediaTypes] = useState()
   const [status, setStatus] = useState()
+  const [submitting, setSubmitting] = useState(false)
 
   const fetchSite = async () => {
     if (process.env.REACT_APP_GH_PAGES === 'true') {
@@ -41,16 +42,30 @@ export const useSubmission = () => {
       })
   }
 
-  const submitData = async (data) => {}
+  const submitData = async (data) => {
+    if (process.env.REACT_APP_GH_PAGES === 'true')
+      return { code: 200, message: 'Success' }
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    let response = {}
+    await axios
+      .post(`${process.env.REACT_APP_API_URL}/submit`, {
+        type: process.env.REACT_APP_API_TYPE,
+        theme: process.env.REACT_APP_API_THEME,
+        data,
+      })
+      .then((res) => (response = res.data))
+      .catch((err) => (response = err.response.data))
+    return response
+  }
+
   useEffect(() => fetchSite(), [])
-  // useEffect(() => console.log(status), [status])
 
   return {
     courses,
     mediaTypes,
     status,
+    submitting,
+    setSubmitting,
     submitData,
   }
 }
