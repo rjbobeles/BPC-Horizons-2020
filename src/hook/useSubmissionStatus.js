@@ -5,7 +5,7 @@ import { useLocation, useHistory } from 'react-router-dom'
 import { useSubmissionContext } from '../hook/useSubmission'
 
 export const useSubmissionStatus = () => {
-  const { status } = useSubmissionContext()
+  const { status, setSubmitting } = useSubmissionContext()
   const location = useLocation()
   const history = useHistory()
 
@@ -41,6 +41,7 @@ export const useSubmissionStatus = () => {
 
   const manageAppViewSubmit = (response) => {
     if (process.env.REACT_APP_DEBUG_MODE === 'false') {
+      setSubmitting(false)
       switch (response.code) {
         case 200:
           if (response.message === 'Success') return history.push('/thankyou')

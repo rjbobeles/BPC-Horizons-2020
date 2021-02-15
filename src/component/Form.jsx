@@ -34,6 +34,10 @@ export default function Form() {
                 placeholder="[Last Name, First Name]"
                 ref={register({
                   required: 'This field is required',
+                  pattern: {
+                    value: /^(((\s)?([A-Z]|Ñ)([a-z]|ñ)*(-)?)+,((\s)([A-Z]|Ñ)(\.)?([a-z]|ñ)*)+)$/,
+                    message: 'Name must be Last Name, First Name',
+                  },
                   minLength: {
                     value: 4,
                     message: 'Minimum of 4 characters is required',
@@ -54,6 +58,10 @@ export default function Form() {
                 placeholder="[1181234]"
                 ref={register({
                   required: 'This field is required',
+                  pattern: {
+                    value: /^(1)[0-5][0-9]([0-9]{5}\b)$/,
+                    message: 'Must be a valid Benilde ID number',
+                  },
                 })}
               />
               <FormFieldError errors={errors} name="idNumber" />
@@ -101,6 +109,10 @@ export default function Form() {
                 placeholder="[name.surname@benilde.edu.ph]"
                 ref={register({
                   required: 'This field is required',
+                  pattern: {
+                    value: /^[a-z0-9](\.?[a-z0-9]){5,}@benilde.edu.ph$/,
+                    message: 'Email must be a valid Benilde email',
+                  },
                 })}
               />
               <FormFieldError errors={errors} name="email" />
@@ -115,6 +127,10 @@ export default function Form() {
                 placeholder="[09234123123]"
                 ref={register({
                   required: 'This field is required',
+                  pattern: {
+                    value: /^(\+)?(09|63)(\s)?[0-9]{2,3}(\s)?[0-9]{3}(\s)?[0-9]{4}\b/,
+                    message: 'Number must be a valid Philippine number',
+                  },
                 })}
               />
               <FormFieldError errors={errors} name="phoneNo" />
@@ -168,6 +184,10 @@ export default function Form() {
                 placeholder="[drive.google.com/mypiece]"
                 ref={register({
                   required: 'This field is required',
+                  pattern: {
+                    value: /^(.)*(docs|drive).google.com(.)*\b/,
+                    message: 'Must be a valid google drive link',
+                  },
                 })}
               />
               <FormFieldError errors={errors} name="drive" />
