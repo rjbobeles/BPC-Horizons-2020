@@ -112,7 +112,7 @@ const folioData = {
     {
       q: 'How long is the caption?',
       a:
-        'All entries must have a caption. The caption is limited to 100 words. It must be placed in a Google Docs file found in your Google Drive folder. In your captions, kindly describe your art, explain its plot, share its meaning or just simply give a statement about your work. It may also be similar to a diary entry!',
+        'All entries must have a caption. The caption is limited to 100 words. It must be placed in a Google Docs file found in your Google Drive folder. Likewise, copy and paste it in the submission form. In your captions, kindly describe your art, explain its plot, share its meaning or just simply give a statement about your work. It may also be similar to a diary entry!',
       a2:
         'For performing arts submissions, such as film and other performing arts, kindly place your role in the film production or performance below the caption (i.e. Juan Dela Cruz - Director).',
     },
