@@ -211,6 +211,17 @@ export default function Form() {
               </select>
               <FormFieldError errors={errors} name="type" />
             </div>
+            <div className="form-row">
+              <p className="text-xs disclaimer karla">
+                Any submitted content in Horizons: Memento becomes the property
+                of the Benildean Press Corps (BPC) and the Student Publications
+                Unit (SPU). By willingly submitting to Horizons: Memento, the
+                contributor gives permission to use the said content in any way
+                BPC and SPU see fit. In addition, all submissions must be
+                original works. If found guilty of plagiarism, violators will be
+                subject to the College’s rules and regulations.
+              </p>
+            </div>
           </div>
         </div>
         <button
