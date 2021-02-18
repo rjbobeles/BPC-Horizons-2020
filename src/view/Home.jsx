@@ -2,6 +2,7 @@ import React from 'react'
 
 import PhotoText from '../component/PhotoText'
 import Entry from '../component/MediaTypes'
+import OtherArt from '../component/OtherArt'
 import FaqItem from '../component/FaqItem'
 import Form from '../component/Form'
 
@@ -97,6 +98,7 @@ function homePage() {
             </IntersectionObserver>
           ))}
         </div>
+        <OtherArt />
       </div>
       <div className="faq container mx-auto py-12 sm:py-16 lg:py-24">
         <h2 className="fraunces text-5xl md:text-6xl text-roast sm:mx-auto sm:text-center mb-12 sm:mb-24 md:mb-32">

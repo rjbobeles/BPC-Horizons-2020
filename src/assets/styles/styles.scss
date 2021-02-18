@@ -110,6 +110,12 @@ h6 {
   }
 }
 
+.other-art {
+  width: 55%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .faq .faq-list > div {
   min-height: 220px;
   width: 45%;
@@ -260,6 +266,10 @@ button.submit:hover {
   .side-corner2 {
     bottom: -380%;
   }
+
+  .other-art {
+    width: 70%;
+  }
 }
 
 /*--- LG --- */
@@ -295,6 +305,10 @@ button.submit:hover {
     bottom: -80%;
     right: -70%;
   }
+
+  .other-art {
+    width: 80%;
+  }
 }
 
 /*--- MD --- */
@@ -326,10 +340,21 @@ button.submit:hover {
   .side-corner2 {
     right: -90%;
   }
+  .other-art {
+    width: 80%;
+  }
 }
 
 /*--- SM --- */
 @media (max-width: 639px) {
+  .other-art {
+    width: 100%;
+  }
+
+  .entry-list > div {
+    width: 100%;
+  }
+
   .memento .hero {
     padding-top: 0;
     padding-bottom: 0;

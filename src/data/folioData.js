@@ -67,14 +67,6 @@ const folioData = {
       description:
         'Film submissions may be the trailers of your directed films through a YouTube link. Preferably, include the movie poster of your film in your submission.',
     },
-    {
-      illus: 'other',
-      title: 'Other forms of art',
-      description:
-        'Other visual arts submissions (ex. Sculptures or ceramics) may be rendered images, or photos of the scale model against a plain background.',
-      description2:
-        'Meanwhile, other performing arts submissions (ex. Dance, theatre or magic) may be the trailers of your performance, or a video less than two (2) minutes, through a YouTube link. Preferably, include the poster of your event in your submission.',
-    },
   ],
   faq: [
     {

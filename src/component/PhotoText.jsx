@@ -23,7 +23,7 @@ export default function PhotoText(props) {
   }
 
   return (
-    <div className="wrapper mx-auto flex flex-col md:flex-row items-center md:items-start py-8 md:py-16">
+    <div className="wrapper mx-auto flex flex-col md:flex-row items-center py-8 md:py-16">
       <div className="w-full sm:w-1/2 lg:w-1/2 flex flex-row justify-end md:pr-5">
         <motion.div
           className={`w-full photo mb-8 md:mb-0 ${props.illus}`}
