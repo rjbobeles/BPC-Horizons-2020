@@ -44,7 +44,7 @@ export default function Form() {
                   },
                   maxLength: {
                     value: 60,
-                    message: 'maximum of 60 characters is required',
+                    message: 'maximum of 60 characters is allowed',
                   },
                 })}
               />
@@ -148,8 +148,8 @@ export default function Form() {
                     message: 'Minimum of 1 characters is required',
                   },
                   maxLength: {
-                    value: 800,
-                    message: 'maximum of 800 characters is required',
+                    value: 100,
+                    message: 'maximum of 800 characters is allowed',
                   },
                 })}
               />
@@ -168,7 +168,7 @@ export default function Form() {
                   },
                   maxLength: {
                     value: 800,
-                    message: 'maximum of 800 characters is required',
+                    message: 'maximum of 800 characters is allowed',
                   },
                 })}
               />
