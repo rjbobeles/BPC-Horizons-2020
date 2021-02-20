@@ -167,8 +167,8 @@ export default function Form() {
                     message: 'Minimum of 1 characters is required',
                   },
                   maxLength: {
-                    value: 200,
-                    message: 'maximum of 200 characters is required',
+                    value: 800,
+                    message: 'maximum of 800 characters is required',
                   },
                 })}
               />
