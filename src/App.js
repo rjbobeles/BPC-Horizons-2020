@@ -26,7 +26,7 @@ function App() {
 
 export default (props) => (
   <SubmissionProvider>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <SubmissionStatusProvider>
         <App {...props} />
       </SubmissionStatusProvider>
